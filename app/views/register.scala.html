@@ -1,0 +1,16 @@
+@(therapistForm: Form[Therapist])
+
+@import helper._
+
+@main("Register Page") {
+    
+	@form(routes.TherapistController.createTherapist()){
+	
+		@inputText(therapistForm("firstName"))
+		@inputText(therapistForm("lastName"))
+		@inputText(therapistForm("emailAddress"))
+		
+		<input type="submit" value="Create">
+	}
+	    
+}
