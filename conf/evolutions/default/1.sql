@@ -3,6 +3,9 @@
 
 # --- !Ups
 
+create table contact_details)
+;
+
 create table therapist (
   id                        bigint not null,
   first_name                varchar(255),
@@ -19,6 +22,8 @@ create sequence therapist_seq;
 # --- !Downs
 
 SET REFERENTIAL_INTEGRITY FALSE;
+
+drop table if exists contact_details;
 
 drop table if exists therapist;
 

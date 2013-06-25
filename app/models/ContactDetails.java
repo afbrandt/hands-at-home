@@ -1,5 +1,13 @@
 package models;
 
-public class ContactDetails {
+import javax.persistence.*;
 
+import play.db.ebean.*;
+
+@Entity
+public class ContactDetails extends Model
+{
+
+	
+	
 }

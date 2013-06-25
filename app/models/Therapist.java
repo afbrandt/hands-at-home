@@ -14,7 +14,9 @@ public class Therapist extends Model
 	@Required
 	private String firstName, lastName, emailAddress;
 
-	public static Finder<Long, Therapist> find = new Finder(Long.class, Therapist.class);
+	private ContactDetails contactDetails;
+	
+	//public static Finder<Long, Therapist> find = new Finder(Long.class, Therapist.class);
 	
 	public String getFirstName() {
 		return firstName;
