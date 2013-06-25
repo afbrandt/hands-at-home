@@ -6,10 +6,11 @@ object ApplicationBuild extends Build {
 
   val appName         = "hands-at-home"
   val appVersion      = "1.0-SNAPSHOT"
+  val postgreSQL 	  = "postgresql" % "postgresql" % "8.4-702.jdbc4"
 
   val appDependencies = Seq(
     // Add your project dependencies here,
-    "postgresql" % "postgresql" % "8.4-702.jdbc4"
+    postgreSQL,
     javaCore,
     javaJdbc,
     javaEbean
