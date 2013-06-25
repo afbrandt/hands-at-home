@@ -12,4 +12,15 @@ public class HomeController extends Controller {
 	  return ok(index.render("Home Page"));
   }
   
+  public static Result contact()
+  {
+	  return ok(contact.render());
+  }
+  
+  public static Result login()
+  {
+	  return ok(login.render());
+  }
+  
+  
 }
