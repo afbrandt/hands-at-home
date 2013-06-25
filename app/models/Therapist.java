@@ -14,6 +14,7 @@ public class Therapist extends Model
 	@Required
 	private String firstName, lastName, emailAddress;
 
+	@Required
 	private ContactDetails contactDetails;
 	
 	//public static Finder<Long, Therapist> find = new Finder(Long.class, Therapist.class);
@@ -40,6 +41,14 @@ public class Therapist extends Model
 
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
+	}
+
+	public ContactDetails getContactDetails() {
+		return contactDetails;
+	}
+
+	public void setContactDetails(ContactDetails contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 	
 }

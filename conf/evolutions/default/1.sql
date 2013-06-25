@@ -3,7 +3,8 @@
 
 # --- !Ups
 
-create table contact_details)
+create table contact_details (
+  telephone_number          varchar(255))
 ;
 
 create table therapist (
