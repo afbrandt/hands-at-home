@@ -9,7 +9,7 @@ import play.db.ebean.*;
 public class ContactDetails extends Model
 {
 	
-	@Required
+	//@Required
 	private String telephoneNumber;
 
 	public String getTelephoneNumber() {

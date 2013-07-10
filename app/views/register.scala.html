@@ -9,6 +9,7 @@
     
 	@form(routes.TherapistController.createTherapist()){
 	
+		@inputText(therapistForm("handle"),'_showConstraints -> false, '_label -> "Username")
 		@inputText(therapistForm("firstName"),'_showConstraints -> false,'_label -> "First Name")
 		@inputText(therapistForm("lastName"),'_showConstraints -> false,'_label -> "Last Name")
 		@inputText(therapistForm("emailAddress"),'_showConstraints -> false,'_label -> "Email Address")

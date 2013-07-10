@@ -9,15 +9,14 @@ import javax.persistence.*;
 public class Therapist extends Model
 {
 	@Id
-	private Long id;
+	@Required
+	private String handle;
 	
 	@Required
 	private String firstName, lastName, emailAddress;
 
-	@Required
+	//@Required
 	private ContactDetails contactDetails;
-	
-	//public static Finder<Long, Therapist> find = new Finder(Long.class, Therapist.class);
 	
 	public String getFirstName() {
 		return firstName;
@@ -51,4 +50,18 @@ public class Therapist extends Model
 		this.contactDetails = contactDetails;
 	}
 	
+	public void setHandle(String handle) {
+		this.handle = handle;
+	}
+
+	public String getHandle() {
+		return handle;
+	}
+
+	@Override
+	public String toString()
+	{
+		return String.format("%s's profile:\n\rName: %s %s\n\rEmail: %s\n\r", 
+			handle, firstName, lastName, emailAddress); 
+	}
 }

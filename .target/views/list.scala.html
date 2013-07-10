@@ -1,0 +1,15 @@
+@(list: List[Therapist])
+
+@main("List Page"){
+
+	<h1>@list.size() people registered.</h1>
+
+	<ul>
+		@for(item <- list) {
+		<li>
+			<a href="../@item.getHandle()/info">@item.getHandle()</a>
+		</li>
+		}
+	</ul>
+
+}

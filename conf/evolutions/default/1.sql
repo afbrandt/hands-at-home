@@ -8,11 +8,11 @@ create table contact_details (
 ;
 
 create table therapist (
-  id                        bigint not null,
+  handle                    varchar(255) not null,
   first_name                varchar(255),
   last_name                 varchar(255),
   email_address             varchar(255),
-  constraint pk_therapist primary key (id))
+  constraint pk_therapist primary key (handle))
 ;
 
 create sequence therapist_seq;

@@ -1,16 +1,21 @@
 @(therapistForm: Form[Therapist])
 
+@import helper.twitterBootstrap._
 @import helper._
 
 @main("Register Page") {
+
+	<h3>Please provide values for all fields</h3>
     
 	@form(routes.TherapistController.createTherapist()){
 	
-		@inputText(therapistForm("firstName"))
-		@inputText(therapistForm("lastName"))
-		@inputText(therapistForm("emailAddress"))
+		@inputText(therapistForm("handle"),'_showConstraints -> false, '_label -> "Username")
+		@inputText(therapistForm("firstName"),'_showConstraints -> false,'_label -> "First Name")
+		@inputText(therapistForm("lastName"),'_showConstraints -> false,'_label -> "Last Name")
+		@inputText(therapistForm("emailAddress"),'_showConstraints -> false,'_label -> "Email Address")
+		@inputText(therapistForm("telephoneNumber"),'_showConstraints -> false,'_label -> "Telephone Number")
 		
-		<input type="submit" value="Create">
+		<input type="submit" value="Submit">
 	}
 	    
 }

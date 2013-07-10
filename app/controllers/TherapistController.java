@@ -30,6 +30,11 @@ public class TherapistController extends Controller {
 		{
 			TherapistService.create(submittedForm.get());
 		}
-		return redirect(routes.TherapistController.register());
+		return redirect(routes.HomeController.list());
+	}
+
+	public static Result info(String handle)
+	{
+		return ok(info.render(TherapistService.findByHandle(handle)));
 	}
 }
